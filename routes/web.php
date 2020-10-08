@@ -19,7 +19,8 @@ Route::get('/', function () {
 
 
 //Route::get('posts/{post}',[\App\Http\Controllers\PostController::class]);
-Route::get('posts/{post}','PostController@show');
+//Route::get('posts/{post}','PostController@show');
+Route::get('/posts/{posts}', [\App\Http\Controllers\PostController::class, 'show']);
 
 Route::get('/contact', function () {
     return view('contact');
@@ -28,3 +29,10 @@ Route::get('/contact', function () {
 Route::get('/about', function () {
     return view('about');
 });
+
+/*
+Route::get('/das', function () {
+    return view('das');
+}); */
+
+Route::get('/das', [\App\Http\Controllers\DasController::class, 'index']);

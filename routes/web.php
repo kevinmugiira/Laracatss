@@ -39,3 +39,10 @@ Route::get('/das', function () {
 
 Route::get('/das', [\App\Http\Controllers\DasController::class, 'index']);
 Route::get('/contact', [\App\Http\Controllers\ContactController::class, 'index']);
+Route::get('/articles/{article}', [\App\Http\Controllers\ArticlesController::class, 'show']);
+Route::get('/show', function (){
+    return view('articles.show');
+});
+
+Route::get('/articles', [\App\Http\Controllers\Articles_subController::class, 'show']);
+

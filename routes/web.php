@@ -27,7 +27,9 @@ Route::get('/contact', function () {
 });
 
 Route::get('/about', function () {
-    return view('about');
+     return view('about', [
+        'articles' => App\Models\Artical::take(3)->latest()->get() //This is equivalent to: order by create_at desc . In mysql
+    ]);
 });
 
 /*
@@ -36,3 +38,4 @@ Route::get('/das', function () {
 }); */
 
 Route::get('/das', [\App\Http\Controllers\DasController::class, 'index']);
+Route::get('/contact', [\App\Http\Controllers\ContactController::class, 'index']);

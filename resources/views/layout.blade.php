@@ -28,6 +28,7 @@ Released   : 20140225
 
 <body>
 @yield('workspace-content')
+@yield('content')
 
 <div id="copyright" class="container">
     <p>&copy; Untitled. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>

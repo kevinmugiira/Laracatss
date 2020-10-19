@@ -18,13 +18,8 @@ Route::get('/', function () {
 });
 
 
-//Route::get('posts/{post}',[\App\Http\Controllers\PostController::class]);
-//Route::get('posts/{post}','PostController@show');
-Route::get('/posts/{posts}', [\App\Http\Controllers\PostController::class, 'show']);
 
-Route::get('/contact', function () {
-    return view('contact');
-});
+
 
 Route::get('/about', function () {
      return view('about', [
@@ -32,17 +27,13 @@ Route::get('/about', function () {
     ]);
 });
 
-/*
-Route::get('/das', function () {
-    return view('das');
-}); */
 
-Route::get('/das', [\App\Http\Controllers\DasController::class, 'index']);
-Route::get('/contact', [\App\Http\Controllers\ContactController::class, 'index']);
-Route::get('/articles/{article}', [\App\Http\Controllers\ArticlesController::class, 'show']);
-Route::get('/show', function (){
-    return view('articles.show');
-});
+Route::get('/articles', [\App\Http\Controllers\ArticlesController::class, 'index']);
+Route::post('/articles', [\App\Http\Controllers\ArticlesController::class, 'store']);
+Route::get('/articles/create', [\App\Http\Controllers\ArticlesController::class, 'create']);
+Route::get('/articles/{articles}', [\App\Http\Controllers\ArticlesController::class, 'show']);
+Route::get('/articles/{articles}/edit', [\App\Http\Controllers\ArticlesController::class, 'edit']);
+Route::put('/articles/{articles}', [\App\Http\Controllers\ArticlesController::class, 'update']);
 
-Route::get('/articles', [\App\Http\Controllers\Articles_subController::class, 'show']);
+
 

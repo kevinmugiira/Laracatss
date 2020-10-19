@@ -1,15 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!--
-Design by TEMPLATED
-http://templated.co
-Released for free under the Creative Commons Attribution License
 
-Name       : SimpleWork
-Description: A two-column, fixed-width design with dark color scheme.
-Version    : 1.0
-Released   : 20140225
-
--->
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -20,14 +10,37 @@ Released   : 20140225
     <link href="/css/default.css" rel="stylesheet" type="text/css" media="all" />
     <link href="/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
 
+    <!--bootstrap css-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+
     <!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+    <!--header-->
+    <div id="header-wrapper">
+        <div id="header" class="container">
+            <div id="logo">
+                <h1><a href="#">SimpleWork</a></h1>
+            </div>
+            <div id="menu">
+                <ul>
+                    <li class="{{Request::path() === '/' ? 'current_page_item':''}}"><a href="/" accesskey="1" title="">Homepage</a></li>
+                    <li class="{{Request::path() === 'clients' ? 'current_page_item':''}}"><a href="#" accesskey="2" title="">Our Clients</a></li>
+                    <li class="{{Request::path() === 'about' ? 'current_page_item':''}}"><a href="/about" accesskey="3" title="">About Us</a></li>
+                    <li class="{{Request::path() === 'articles' ? 'current_page_item':''}}"><a href="/articles" accesskey="4" title="">Articles</a></li>
+                    <li class="{{Request::path() === 'contact' ? 'current_page_item':''}}"><a href="/contact" accesskey="5" title="">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <!--//header-->
 
 </head>
 
-@yield('header')
 
 <body>
-@yield('workspace-content')
+
 @yield('content')
 
 <div id="copyright" class="container">
@@ -35,5 +48,14 @@ Released   : 20140225
 </div>
 
 
+<!--javascript-->
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<!--//javascript-->
 </body>
 </html>

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class DasController extends Controller
+class TestingController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,7 @@ class DasController extends Controller
      */
     public function index()
     {
-        return view('das');
+        //
     }
 
     /**

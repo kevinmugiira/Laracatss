@@ -16,11 +16,11 @@ class ArticlesController extends Controller
     }
 
 
-    public function show($id)
+    public function show(Artical $articles)
     {
 
         //show a list of resources
-        $articles = Artical::find($id);
+        //$articles = Artical::findOrFail($id);
 
         return view('articles.show', ['article' => $articles]);
     }
@@ -35,6 +35,13 @@ class ArticlesController extends Controller
     public function store()
     {
         //persist the new resource
+
+        request()-> validate([
+            'title' => 'required',
+            'excerpt' => 'required',
+            'body' => 'required'
+
+        ]);
         $article = new Artical();
 
         $article->title = \request('title');
@@ -47,18 +54,25 @@ class ArticlesController extends Controller
 
     }
 
-    public function edit($id)
+    public function edit(Artical $article)
     {
-        $article = Artical::find($id);
-        //show a view to edit an existing resource
+              //show a view to edit an existing resource
         return view('articles.edit',compact('article'));
 
     }
 
-    public function update($id)
+    public function update(Artical $article)
     {
         //persist the edited resource
-        $article = Artical::find($id);
+
+        request()-> validate([
+            'title' => 'required',
+            'excerpt' => 'required',
+            'body' => 'required'
+
+        ]);
+
+       // $article = Artical::findOrFail($id);
 
         $article->title = \request('title');
         $article->excerpt = \request('excerpt');

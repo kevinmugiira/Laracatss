@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html >
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,11 +6,17 @@
     <title></title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
+
+
+    <!--bulma responsive meta view tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
     <link href="/css/default.css" rel="stylesheet" type="text/css" media="all" />
     <link href="/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
 
-    <!--bootstrap css-->
+    <!--bootstrap css-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
 
@@ -48,14 +54,6 @@
 </div>
 
 
-<!--javascript-->
 
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-<!--//javascript-->
 </body>
 </html>

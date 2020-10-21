@@ -32,9 +32,7 @@
                     <label class="label" for="excerpt">Excerpt</label>
                     <div class="control">
                         <textarea class="textarea" name="excerpt" id="excerpt">{{$article->excerpt}}</textarea>
-                        @error('title')
-                        <div class="alert alert-danger">{{$message}}</div>
-                        @error
+
                     </div>
                 </div>
 
